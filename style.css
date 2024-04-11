@@ -132,6 +132,8 @@ body{
 }
 .menu__icon{
   display: none;
+
+  z-index: 300;
 }
 
 .header__button {
@@ -375,10 +377,68 @@ body{
 }
 /* /PROMO */
 
+/* parallax */
+
+.purpose{
+  position: relative;
+  margin-top: 100px;
+}
+
+.layers {
+	perspective: 1000px;
+	overflow: hidden;
+  position: absolute;
+  left: 0;
+
+}
+.layers__container {
+	height: 100vh;
+  width: 100vw;
+	min-height: 500px;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
+
+}
+.layers__item {
+	position: absolute;
+  
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+  
+}
+.layer-1 {
+  
+	transform: translateZ(-55px) scale(1.06);
+}
+.layer-2 {
+	transform: translateZ(430px) scale(.88);
+}
+.layer-3 {
+	transform: translateZ(180px) scale(.8);
+}
+/* .layer-4 {
+	transform: translateZ(190px) scale(.9);
+} */
+.layer-5 {
+	transform: translateZ(300px) scale(.9);
+}
+.layer-6 {
+	transform: translateZ(380px);
+}
+
+/* / parallax */
+
 /* slider */
 
 .slider {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -406,7 +466,7 @@ body{
 .slide.next {
   opacity: 0.6;
   filter: blur(15px);
-  transform: translateX(150%) translateY(-10%) rotateY(-35deg) rotateX(-20deg);
+  transform: translateX(120%) translateY(-10%) rotateY(-35deg) rotateX(-20deg);
   z-index: 1;
 }
 
@@ -419,8 +479,8 @@ body{
 }
 
 .slide p {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 20px;
+  text-align: left;
 }
 
 
@@ -431,6 +491,9 @@ body{
   line-height: 26px;
   letter-spacing: 0px;
   text-align: left;
+  background: linear-gradient(135deg , rgb(0 0 0 / 62%),rgb(0 0 0 / 27%));
+  padding: 30px;
+  border-radius: 30px;
 }
 
 /* /slider */
@@ -504,6 +567,7 @@ body{
   }
   .header-menu.active{
     left: 0;
+    z-index: 300;
   }
   .menu__list{
     padding: 30px;

@@ -59,7 +59,6 @@ window.onpointermove = event => {
 }
 
 // slider
-
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -87,9 +86,10 @@ function changeSlide() {
 }
 
 setInterval(changeSlide, 10000); // Смена слайда каждые 6 секунды
+// /slider
+
 
 // popup
-
 const headerButton = document.querySelector('.header__button');
 const popup = document.getElementById('popup');
 const popupClose = document.getElementById('popup-close');
@@ -122,6 +122,18 @@ popupForm.addEventListener('submit', (e) => {
   // Здесь можно добавить логику отправки формы на сервер
   popup.classList.remove('active');
 });
-
-
 // /popup
+
+// parallax
+
+document.addEventListener('mousemove', e => {
+	Object.assign(document.documentElement, {
+		style: `
+		--move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
+		--move-y: ${(e.clientY - window.innerHeight / 2) * .01}deg;
+		`
+	})
+})
+
+
+// / parallax
