@@ -13,6 +13,9 @@
 </head>
 <body>
     <div id="blur"></div>
+    <div id="blob-container">
+        <div id="blob"></div>
+    </div>
     <header class="header">
         <div class="container">  
             <div class="header-row">
@@ -48,6 +51,19 @@
                         </ul>
                     </nav>
                     <button class="header__button">ВСТУПИТЬ</button>
+
+                    <div class="popup" id="popup">
+                        <div class="popup__content">
+                          <h2 class="popup__title">Введите имя и телефон</h2>
+                          <form class="popup__form" id="popup-form">
+                            <input type="text" class="popup__input" id="popup-name" placeholder="Имя" required>
+                            <input type="tel" class="popup__input" id="popup-phone" placeholder="Телефон" required>
+                            <button type="submit" class="popup__button">Отправить</button>
+                          </form>
+                          <button class="popup__close" id="popup-close">&times;</button>
+                        </div>
+                    </div>
+                      
                     <div class="menu__icon">
                         <span></span>
                         <span></span>
@@ -58,15 +74,10 @@
             </div>
         </div>
 
-        <div id="blob"></div>
+
     </header>
-<<<<<<< HEAD
-    <!-- <main class="main">
-        <section class="promo">
-=======
     <main class="main">
-<!--         <section class="promo">
->>>>>>> e39d0c3f43c13b85a8148793b4fa03f1392e6d12
+        <section class="promo">
             <div class="container">
                 <div class="promo__row">
                     <ul class="promo__list">
@@ -98,15 +109,23 @@
                 </div>
                 <p class="promo__text-under">Откройте для себя мир без оков в финансовой и личной сфере жизни</p>
             </div>
-        </section> -->
+        </section>
         <section class="purpose">
             <div class="container">
                 <div class="slider">
-
-                </div>
+                    <div class="slide active" data-index="0">
+                      <p class="purpose__paragraph">Наша миссия - вдохновлять и преобразовывать жизни миллионов людей по всему миру через новаторские методы психоанализа, гипнотерапии и нейрокоучинга, раскрывать огромные возможности для личностного и профессионального роста.</p>
+                    </div>
+                    <div class="slide next" data-index="1">
+                      <p class="purpose__paragraph">Наша миссия - вдохновлять и преобразовывать жизни миллионов людей по всему миру через новаторские методы психоанализа, гипнотерапии и нейрокоучинга, раскрывать огромные возможности для личностного и профессионального роста.</p>
+                    </div>
+                    <div class="slide" data-index="2">
+                      <p class="purpose__paragraph">Наша миссия - вдохновлять и преобразовывать жизни миллионов людей по всему миру через новаторские методы психоанализа, гипнотерапии и нейрокоучинга, раскрывать огромные возможности для личностного и профессионального роста.</p>
+                    </div>
+                </div>                                    
             </div>
         </section>
-    </main> -->
+    </main>
     <script src="./index.js"></script>
 </body>
 </html>
